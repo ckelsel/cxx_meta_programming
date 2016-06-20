@@ -12,12 +12,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-typedef int T;
+
+template <class Iterator> struct iterator_traits;
 
 template <class ForwardIterator1, class ForwardIterator2>
 void iter_swap(ForwardIterator1 i1, ForwardIterator2 i2)
 {
-    T tmp = *i1;
-    *i1 = *i2;
-    *i2 = tmp;
+    typename
+      iterator_traits<ForwardIterator1>::value_type tmp = *i1;
+      *i1 = *i2;
+      *i2 = tmp;
 }

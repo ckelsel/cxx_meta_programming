@@ -12,12 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-typedef int T;
+#include <iostream>
+using namespace std;
 
-template <class ForwardIterator1, class ForwardIterator2>
-void iter_swap(ForwardIterator1 i1, ForwardIterator2 i2)
+#include "example1.cpp"
+
+
+int main(int argc, char **argv)
 {
-    T tmp = *i1;
-    *i1 = *i2;
-    *i2 = tmp;
+    int m = 10;
+    int n = 11;
+
+
+    cout << "m = " << m << ", n = " << n << endl; 
+    return 0;
 }
